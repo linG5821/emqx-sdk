@@ -37,7 +37,6 @@ public class EmqxHttpClient {
         }
 
         UrlBuilder urlBuilder = getUrlBuilder(path);
-        System.out.println(urlBuilder.toString());
         HttpRequest request =
             new HttpRequest(urlBuilder).method(method).basicAuth(config.getUsername(), config.getPassword());
         if ((method == Method.POST || method == Method.PUT) && body != null) {
@@ -47,7 +46,6 @@ public class EmqxHttpClient {
         if (!response.isOk()) {
             throw new RuntimeException("request error: " + response.getStatus());
         }
-        System.out.println(response.body());
         return response.body();
     }
 
