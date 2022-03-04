@@ -32,7 +32,7 @@
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
             <scope>provided</scope>
-            <version>5.5.7</version>
+            <version>5.7.22</version>
         </dependency>
 
         <dependency>
